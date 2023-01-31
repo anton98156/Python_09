@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from spy import *
 import datetime
 
-async def hi_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def hi_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     log(update, context)
     await update.message.reply_text(f'Hi {update.effective_user.first_name}')
 
